@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
- * main - This program outputs a string using fwrite.
+/**
+ * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 1
  */
 int main(void)
 {
