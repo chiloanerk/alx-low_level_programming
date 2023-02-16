@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- * main - This program outputs a string without using fwrite.
+ * main - This program outputs a string using fwrite.
  *
  * Return: Always 0 (Success)
  */
