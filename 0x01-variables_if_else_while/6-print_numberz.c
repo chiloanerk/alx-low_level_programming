@@ -1,17 +1,20 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
- * Return: 0
+ *
+ * Return: Always 0 (Succes)
  */
+
 int main(void)
 {
-	int i = 0;
+	int n;
 
-	while (i < 10)
+	for (n = 0 ; n < 10 ; n++)
 	{
-		putchar(i + '0');
-	i++;
+		putchar(n + '0');
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
+
