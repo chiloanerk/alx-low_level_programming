@@ -1,27 +1,27 @@
-#include "main.h"
+#include "holberton.h"
+#include <stdlib.h>
 
 /**
- * rev_string - reverse a string
- * @s: input variable
- * Return: void
+ * rev_string - Reverses a string in place
+ * @s: pointer to the first character in the string
  */
-
 void rev_string(char *s)
 {
-	int i = 0;
-	int j, k;
+	int len, i;
+	char *str;
 
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
+	for (len = 0; *s; s++)
+		len++;
 
-	for (j = 0, k = i - 1; j < k; j++, k--)
-	{
-		char temp = s[j];
+	str = malloc(sizeof(char) * len);
+	s--;
 
-		s[j] = s[k];
-		s[k] = temp;
-	}
+	for (i = 0; i < len; i++)
+		str[i] = *(s--);
+	s++;
+
+	str[i] = '\0';
+
+	for (i = 0; str[i]; i++)
+		s[i] = str[i];
 }
