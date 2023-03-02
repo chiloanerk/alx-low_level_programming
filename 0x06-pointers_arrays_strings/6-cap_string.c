@@ -17,10 +17,11 @@ char *cap_string(char *str)
 		j = 0;
 		while (j < sepLen)
 		{
-			if ((str[j - 1] == seperators[j] || j == 0) &&
-					(str[j] >= 97 && str[j] <= 122))
+			if ((str[i - 1] == seperators[j] || i == 0) &&
+					(str[i] >= 'a' && str[i] <= 'z'))
 			{
-				str[j] = str[j] - 32;
+				str[i] = str[i] - 'a' + 'A';
+				break;
 			}
 			j++;
 		}
