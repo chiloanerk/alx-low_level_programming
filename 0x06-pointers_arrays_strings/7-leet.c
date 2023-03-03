@@ -10,7 +10,7 @@ char *leet(char *str)
 	int i = 0;
 	char s;
 
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		s = str[i];
 		if (s == 'a' || s == 'A')
@@ -22,7 +22,7 @@ char *leet(char *str)
 		else if (s == 't' || s == 'T')
 			str[i] = '7';
 		else if (s == 'l' || s == 'L')
-			str[i] = 1;
+			str[i] = '1';
 		i++;
 	}
 	return (str);
