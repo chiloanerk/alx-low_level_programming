@@ -1,28 +1,30 @@
 #include "main.h"
+
 /**
  * leet - Convert string into 1337 (leet) code
  * @str: input string pointer var
- * Return: str
+ * Return: pointer to modified string
  */
 
 char *leet(char *str)
 {
+	char leet_map[256] = {0};
 	int i = 0;
-	char s;
 
-	while (str[i])
+	leet_map['a'] = '4';
+	leet_map['A'] = '4';
+	leet_map['e'] = '3';
+	leet_map['E'] = '3';
+	leet_map['o'] = '0';
+	leet_map['O'] = '0';
+	leet_map['t'] = '7';
+	leet_map['T'] = '7';
+	leet_map['l'] = '1';
+	leet_map['L'] = '1';
+	while (str[i] != '\0')
 	{
-		s = str[i];
-		if (s == 'a' || s == 'A')
-			str[i] = '4';
-		else if (s == 'e' || s == 'E')
-			str[i] = '3';
-		else if (s == 'o' || s == 'O')
-			str[i] = '0';
-		else if (s == 't' || s == 'T')
-			str[i] = '7';
-		else if (s == 'l' || s == 'L')
-			str[i] = '1';
+		if (leet_map[(unsigned char) str[i]] != 0)
+			str[i] = leet_map[(unsigned char) str[i]];
 		i++;
 	}
 	return (str);
