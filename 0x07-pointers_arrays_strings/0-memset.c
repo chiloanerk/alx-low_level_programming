@@ -3,10 +3,11 @@
  * _memset - fills memory with a constant byte
  * @s: pointer to the block of memory to be filled
  * @b: value to be set as a char
- * @n: number of bytes to be set to the value
+ * @n: number of bytes
+ *
  * Return: s
  */
-char *_memset(char *s, char b, unsigned int (n))
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
