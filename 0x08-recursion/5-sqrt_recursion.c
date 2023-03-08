@@ -8,6 +8,9 @@ int find_sqrt_helper(int n, int low, int high);
  */
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1);
+
 	return (find_sqrt_helper(n, 0, n));
 }
 
